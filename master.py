@@ -13,7 +13,7 @@ import base64
 app = Flask(__name__)
 UPLOAD_FOLDER = 'uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-slave_nodes = ['http://10.26.13.117:5000', 'http://10.26.12.220:5000', 'http://10.26.13.197:5000']
+slave_nodes = ['ip@1', 'ip@1', 'ip@1']
 
 # Ensure the uploads folder exists
 if not os.path.exists(UPLOAD_FOLDER):
