@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processing Result</title>
+</head>
+<body>
+    <h1>Processing Result</h1>
+    <p>Elapsed Time: {{ elapsed_time }} seconds</p>
+
+    <h2>Original Image</h2>
+    <img src="data:image/jpeg;base64,{{ original_image }}" alt="Original Image" style="width: 500px; height: 350px; margin: 10px;">
+
+    <h2>Processed Image</h2>
+    <img src="data:image/jpeg;base64,{{ processed_image }}" alt="Processed Image" style="width: 500px; height: 350px; margin: 10px;">
+
+    <h2>Processed Channels</h2>
+    {% for processed_image in processed_images %}
+        <img src="data:image/jpeg;base64,{{ processed_image }}" alt="Processed Channel Image" style="width: 200px; height: 100px; margin: 10px;">
+    {% endfor %}
+    
+    <br>
+    <a href="/">Upload another image</a>
+</body>
+</html>
